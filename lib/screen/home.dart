@@ -5,53 +5,16 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return Row(
     return Column(
-      // mainAxisAlignment: MainAxisAlignment.start,
-      // mainAxisAlignment: MainAxisAlignment.center,
-      // mainAxisAlignment: MainAxisAlignment.end,
-      // mainAxisAlignment: MainAxisAlignment.spaceAround,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Container(
-          color: Colors.redAccent,
-          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-          child: Text(
-            "Hello Flutter 5",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,
-            ),
-          ),
-        ),
-        Container(
-          color: Colors.greenAccent,
-          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-          child: Text(
-            "Hello Flutter 5",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,
-            ),
-          ),
-        ),
-        Container(
-          color: Colors.blueAccent,
-          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 5),
-          child: Text(
-            "Hello Flutter 5",
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,
-            ),
-          ),
+        Image.asset("assets/images/flower.jpg", width: 200, height: 200),
+        SizedBox(height: 20),
+        Image.network(
+          "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+          width: 200,
+          height: 200,
         ),
       ],
     );
