@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // import 'screen/home.dart';
 import 'package:learn_flutter_68_2/screen/home.dart';
 
+import 'package:learn_flutter_68_2/screen/item.dart';
+
 void main() {
   // runApp(const MyApp());
 
@@ -18,7 +20,8 @@ void main() {
           backgroundColor: Colors.pinkAccent,
           centerTitle: true,
         ),
-        body: Home(),
+        // body: Home(),
+        body: Item(),
       ),
     ),
   );
