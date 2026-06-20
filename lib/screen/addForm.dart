@@ -17,9 +17,7 @@ class _AddFormState extends State<AddForm> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Add Person",
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text("Add Person"),
           backgroundColor: Colors.pinkAccent,
@@ -93,12 +91,13 @@ class _AddFormState extends State<AddForm> {
                 ),
                 DropdownButtonFormField<Job>(
                   decoration: InputDecoration(labelText: "Job"),
+                  initialValue: _job,
                   items: Job.values.map((key) {
                     return DropdownMenuItem(value: key, child: Text(key.title));
                   }).toList(),
                   onChanged: (value) {
                     setState(() {
-                      _job = value!; // ! to assert non-null
+                      _job = value;
                     });
                   },
                 ),
@@ -114,8 +113,8 @@ class _AddFormState extends State<AddForm> {
                         people.add(Person(name: _name, age: _age, job: _job!));
                       });
 
-                      // Clear the form after submission
-                      _formKey.currentState!.reset();
+                      // Navigate back to Item screen after submission
+                      Navigator.pop(context);
                     }
                   },
                   style: FilledButton.styleFrom(
@@ -131,7 +130,6 @@ class _AddFormState extends State<AddForm> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

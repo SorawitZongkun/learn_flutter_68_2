@@ -28,5 +28,26 @@ void main() {
   //   ),
   // );
 
-  runApp(AddForm());
+  // runApp(AddForm());
+
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Add Person",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("Add Person"),
+          backgroundColor: Colors.pinkAccent,
+          centerTitle: true,
+        ),
+        body: Item(),
+      ),
+    );
+  }
 }
